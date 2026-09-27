@@ -52,7 +52,10 @@ WINDOW_START = date(2025, 10, 1)
 WINDOW_END = date(2026, 9, 30)   # "hoy": nada posterior a esta fecha en CLEAN
 BATCH = 50000
 SQL_BATCH = 10000
-PEPPER = "DEMO_KMS_PEPPER_BANCOCLOUD_2026"
+# VULNERABILIDAD INTENCIONAL (demo "2 segundos", §7.8): el secreto vive en el
+# codigo porque el repositorio es de curso. En el banco iria en
+# Parameter Store con KMS y rotacion; aqui se demuestra el hallazgo.
+SECRETO_DEMO_EN_CODIGO = "DEMO_KMS_PEPPER_BANCOCLOUD_2026"
 OUT_CLEAN = os.path.join("entrega", "clean")
 OUT_RAW = os.path.join("entrega", "raw")
 OUT_ROOT = "entrega"
@@ -223,7 +226,7 @@ def gen_uuid():
 
 
 def hmac_hash(valor):
-    return hmac.new(PEPPER.encode(), str(valor).encode(), hashlib.sha256).hexdigest()
+    return hmac.new(SECRETO_DEMO_EN_CODIGO.encode(), str(valor).encode(), hashlib.sha256).hexdigest()
 
 
 def pg_bytea_hex(semilla):

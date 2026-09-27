@@ -1,5 +1,2 @@
-# entrega/ SI se versiona (via Git LFS, ver .gitattributes)
-# lote de estres local: no versionar
-out/
 __pycache__/
 *.pyc

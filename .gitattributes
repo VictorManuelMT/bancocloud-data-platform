@@ -1,4 +1,2 @@
-entrega/**/*.sql filter=lfs diff=lfs merge=lfs -text
-entrega/**/*.csv filter=lfs diff=lfs merge=lfs -text
-out/**/*.csv filter=lfs diff=lfs merge=lfs -text
-out/**/*.sql filter=lfs diff=lfs merge=lfs -text
+**/*.csv filter=lfs diff=lfs merge=lfs -text
+**/*.sql filter=lfs diff=lfs merge=lfs -text
