@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-11-15T00:00:00Z",
+  "seed": 42,
+  "window": [
+    "2025-11-01",
+    "2026-10-31"
+  ],
+  "circuit_breaker_threshold_pct": 0.01,
+  "datasets": {
+    "clean": {
+      "run_id": "bdd640fb-0667-4ad1-9c80-317fa3b1799d",
+      "target": "core/reference (OLTP)",
+      "records_evaluated": 1000000,
+      "records_correct": 1000000,
+      "records_corrupt": 0,
+      "error_breakdown": {
+        "duplicados": 0,
+        "montos_invalidos": 0,
+        "dominios_invalidos": 0,
+        "huerfanos": 0,
+        "fechas_anomalas": 0,
+        "estados_invalidos": 0
+      },
+      "failure_percentage": 0.0,
+      "expected_dq_status": "PASSED",
+      "master_counts": {
+        "clientes_persona": 20000,
+        "clientes_total": 20001,
+        "cuentas_persona": 35000,
+        "cuentas_total": 35010,
+        "tarjetas": 20000,
+        "creditos": 5000,
+        "cuotas": 374880,
+        "transacciones": 1000000,
+        "completadas": 980211,
+        "rechazadas": 19789,
+        "movimientos": 1960422
+      },
+      "ledger_control": {
+        "sum_debitos": 1097399691.46,
+        "sum_creditos": 1097399691.46,
+        "balanced": true
+      }
+    },
+    "raw_dirty": {
+      "run_id": "23b8c1e9-3924-46de-beb1-3b9046685257",
+      "target": "S3 Bronze (DataOps)",
+      "records_evaluated": 1000000,
+      "records_correct": 993000,
+      "records_corrupt": 7000,
+      "error_breakdown": {
+        "duplicados": 2000,
+        "montos_invalidos": 1000,
+        "dominios_invalidos": 1000,
+        "huerfanos": 1000,
+        "fechas_anomalas": 1000,
+        "estados_invalidos": 1000
+      },
+      "failure_percentage": 0.7,
+      "expected_dq_status": "CRITICAL_HALT",
+      "s3_layout": "out/raw/anio=YYYY/mes=MM/transacciones_raw.csv"
+    }
+  }
+}

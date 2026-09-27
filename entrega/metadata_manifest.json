@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-09-30T00:00:00Z",
+  "seed": 20260926,
+  "window": [
+    "2025-10-01",
+    "2026-09-30"
+  ],
+  "circuit_breaker_threshold_pct": 0.01,
+  "notas": "comision es informativa (ingreso devengado, se liquida en lote); el ledger mueve el monto en 2 asientos. saldos: final = inicial + creditos - debitos del ledger. buckets SBS: AL_DIA<=8, 1_30=9-30, 31_60=31-60, 61_90=61-90, 90_MAS=91+. EN_MORA = dias_mora>8. RAW 2%: misma proporcion de la tabla guia 7.6 escalada (la tabla suma 0.575%). deterioro: beneficiario en mora cobra ~65% menos en 90 dias previos.",
+  "datasets": {
+    "clean": {
+      "run_id": "9616f743-040c-4515-8bdf-701612aa21ba",
+      "target": "core/reference (OLTP)",
+      "records_evaluated": 200000,
+      "records_correct": 200000,
+      "records_corrupt": 0,
+      "failure_percentage": 0.0,
+      "expected_dq_status": "PASSED",
+      "master_counts": {
+        "clientes": 8000,
+        "cuentas": 12000,
+        "tarjetas": 8000,
+        "solicitudes": 3000,
+        "creditos": 2000,
+        "cuotas": 40704,
+        "pagos": 20357,
+        "transacciones": 200000,
+        "completadas": 198273,
+        "rechazadas": 1727,
+        "movimientos": 396546,
+        "gestiones": 5000,
+        "mora_pct": 11.35
+      },
+      "ledger_control": {
+        "sum_debitos": 126585167.16,
+        "sum_creditos": 126585167.16,
+        "balanced": true,
+        "saldo_inicial_total": 5114035948.19,
+        "saldo_final_total": 5114035948.19
+      }
+    },
+    "raw": {
+      "run_id": "d7ecfbb5-816f-4677-99b4-4b433aa2133a",
+      "target": "lago Bronze (DataOps)",
+      "transacciones_base": 200000,
+      "transacciones_raw_total": 200696,
+      "errores_transacciones": {
+        "duplicadas": 696,
+        "monto_no_positivo": 522,
+        "moneda_invalida": 417,
+        "fecha_futura": 1043,
+        "origen_inexistente": 626,
+        "nulo_monto": 232,
+        "nulo_cuenta": 232,
+        "nulo_fecha": 232
+      },
+      "tasa_error_transacciones_pct": 2.0,
+      "errores_cruzados": {
+        "dni_duplicado": 60,
+        "saldo_mayor_aprobado": 80,
+        "ledger_descuadrado": 40
+      },
+      "catalogo": "entrega/catalogo_errores.csv",
+      "expected_dq_status": "CRITICAL_HALT"
+    }
+  }
+}
