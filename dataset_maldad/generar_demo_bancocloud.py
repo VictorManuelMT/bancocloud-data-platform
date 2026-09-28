@@ -8,8 +8,15 @@
 #   / gestiones_cobranza 5000 (notas texto libre para Bedrock).
 # Ventana: 2025-10-01 a 2026-09-30 (12 meses, sin fechas futuras).
 # Cartera con historia dentro de la ventana (desembolsos oct-2025 → jun-2026).
-# Buckets SBS: Normal ≤8, CPP 9-30, Deficiente 31-60, Dudoso 61-120,
-# Pérdida >120 (mapeados a los 5 valores del DDL).
+# Ajustes de la seccion 7.8:
+#  1. Cartera SOLO consumo (CRED_PERSONAL): la tabla de provisiones de la lamina
+#     es la de consumo sin garantias; hipotecario y pyme (S/ 80k-500k) pesarian
+#     mas que el consumo por monto y el calculo de valor quedaria mal.
+#  2. dias_mora con tope 60: no quedan casos de 111 (ni 238) dias, asi el filtro
+#     1-60 de la app y del dashboard da la misma poblacion.
+#  3. Buckets con los cortes SBS Res. 11356-2008 (8/30/60/120), derivados de
+#     dias_mora y no al reves: con el tope de 60 solo aparecen AL_DIA,
+#     1_30_DIAS y 31_60_DIAS, y cada rotulo cae exactamente en su categoria SBS.
 # RAW 2.00%: misma proporción de la tabla de la guía §7.6 escalada
 # (la tabla suma 0.575%; se mantiene proporción y se escala a 2%).
 # Ventana: 2025-10-01 a 2026-09-30 (12 meses, sin fechas futuras).
@@ -448,6 +455,9 @@ def build_tarjetas(n, clientes, cuentas_persona):
 # CRÉDITOS + PAGOS (los pagos mandan: de ellos derivan cuotas y mora)
 # Cartera con historia: desembolsos ene-2025 → jun-2026 para que haya
 # suficientes cuotas vencidas y ~30k pagos. "Hoy" = 2026-09-30.
+# 7.8: todo el credito es CRED_PERSONAL (producto 9). Hipotecario (10) y pyme
+# (11) van de S/80k a S/500k y pesarian mas que el consumo por monto, rompiendo
+# la tabla de provisiones de la lamina.
 # =============================================================================
 TEA = {9: (18.0, 49.9), 10: (8.0, 11.5), 11: (15.0, 25.0)}
 PLAZOS = [12, 18, 24, 36]
@@ -456,22 +466,26 @@ DESDE = date(2025, 10, 1)
 HASTA = date(2026, 6, 30)
 HOY = WINDOW_END
 LUCHA_PCT = 0.11  # ~11% en lucha -> EN_MORA (dias>8) queda en 8-12%
-# Reparto objetivo de la mora entre buckets SBS (suma 1.0).
-MORA_W = [("CPP", 9, 30, 0.35), ("DEF", 31, 60, 0.30),
-          ("DUD", 61, 120, 0.20), ("PERD", 121, 250, 0.15)]
+# Reparto objetivo de la mora (suma 1.0). Sin DUD/PERD: 7.8 pide cero casos por
+# encima de 60 dias, asi que la mora vive solo en CPP (9-30) y DEF (31-60),
+# que son exactamente los rotulos 1_30_DIAS y 31_60_DIAS del DDL.
+MORA_W = [("CPP", 9, 30, 0.50), ("DEF", 31, 60, 0.50)]
 
 
 def bucket_de(mora):
-    # Cortes SBS Res. 11356-2008: Normal ≤8, CPP 9-30, Deficiente 31-60,
-    # Dudoso 61-120, Pérdida >120. Se mapea a los 5 valores del DDL
-    # (61_90_DIAS cubre 61-90 y 90_MAS_DIAS cubre 91+).
+    # Derivado de dias_mora con los cortes SBS Res. 11356-2008: Normal <=8,
+    # CPP 9-30, Deficiente 31-60, Dudoso 61-120, Perdida >120. Con el tope de
+    # 60 dias del generador solo se emiten los tres primeros rotulos, cada uno
+    # en su categoria SBS real (sin traducir rotulos entre si).
     if mora <= 8:
         return "AL_DIA"
     if mora <= 30:
         return "1_30_DIAS"
     if mora <= 60:
         return "31_60_DIAS"
-    if mora <= 90:
+    # Inalcanzable con MORA_W actual. Se deja alineado al corte SBS de 120
+    # dias; si alguien vuelve a tocar el tope, validar_demo.py lo atrapa.
+    if mora <= 120:
         return "61_90_DIAS"
     return "90_MAS_DIAS"
 
@@ -492,7 +506,7 @@ def build_creditos(n_sol, n_aprob, clientes):
     qid = pid = 0
     for s in range(1, n_sol + 1):
         cli = random.choice(clientes)
-        prod = random.choice([9, 9, 9, 10, 11])
+        prod = 9  # solo CRED_PERSONAL (7.8); no mezclar con hipotecario/pyme
         base = {9: (3000, 40000), 10: (80000, 500000), 11: (20000, 300000)}[prod]
         mc = random.randint(base[0] * 100, base[1] * 100)
         plz = random.choices(PLAZOS, weights=PLAZOS_W, k=1)[0]
@@ -530,7 +544,7 @@ def build_creditos(n_sol, n_aprob, clientes):
                           "tot": tot, "fv": (fdes + timedelta(days=30 * k)).date(),
                           "pagado": 0})
         # Pagos: buenos pagan todo lo vencido (+ adelanto 60%); en lucha se
-        # fija un objetivo de mora SBS (9-30/31-60/61-120/>120) y se pagan
+        # fija un objetivo de mora (9-60, cortes SBS) y se pagan
         # las cuotas más antiguas dejando impaga la del objetivo. Así la
         # mora queda repartida entre buckets en vez de acumularse en 90+.
         # Cada pago referencia su cuota. Deterioro: el cliente en lucha se
@@ -541,9 +555,13 @@ def build_creditos(n_sol, n_aprob, clientes):
             objetivo = pick_mora_objetivo()
             max_age = max((HOY - cu["fv"]).days for cu in vencidas)
             objetivo = min(objetivo, max_age)
+            # Solo se elige entre cuotas de hasta 60 dias (7.8: cero casos de
+            # 111/238 dias). Con cuotas mensuales siempre hay alguna en ese
+            # rango; el respaldo es la vencida más nueva.
+            cand = [i for i, cu in enumerate(vencidas)
+                    if (HOY - cu["fv"]).days <= 60] or [len(vencidas) - 1]
             # índice de la cuota cuya edad más se acerca al objetivo
-            idx_obj = min(range(len(vencidas)),
-                          key=lambda i: abs((HOY - vencidas[i]["fv"]).days - objetivo))
+            idx_obj = min(cand, key=lambda i: abs((HOY - vencidas[i]["fv"]).days - objetivo))
         for vi, cu in enumerate(sched):
             if cu["fv"] > HOY:
                 continue
@@ -1155,8 +1173,12 @@ def main():
         "notas": ("comision es informativa (ingreso devengado, se liquida en lote); "
                   "el ledger mueve el monto en 2 asientos. "
                   "saldos: final = inicial + creditos - debitos del ledger. "
-                  "buckets SBS: AL_DIA<=8, 1_30=9-30, 31_60=31-60, 61_90=61-90, 90_MAS=91+. "
-                  "EN_MORA = dias_mora>8. RAW 2%: misma proporcion de la tabla guia 7.6 "
+                  "buckets derivados de dias_mora con cortes SBS 8/30/60/120: "
+                  "AL_DIA<=8, 1_30=9-30, 31_60=31-60 (unicos rotulos posibles: "
+                  "dias_mora esta topeado en 60, sin casos de 111/238 dias). "
+                  "EN_MORA = dias_mora>8. Cartera solo consumo (CRED_PERSONAL, "
+                  "producto 9). "
+                  "RAW 2%: misma proporcion de la tabla guia 7.6 "
                   "escalada (la tabla suma 0.575%). "
                   "deterioro: beneficiario en mora cobra ~65% menos en 90 dias previos."),
         "datasets": {

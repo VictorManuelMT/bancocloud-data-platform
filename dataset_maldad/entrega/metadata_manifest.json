@@ -6,7 +6,7 @@
     "2026-09-30"
   ],
   "circuit_breaker_threshold_pct": 0.01,
-  "notas": "comision es informativa (ingreso devengado, se liquida en lote); el ledger mueve el monto en 2 asientos. saldos: final = inicial + creditos - debitos del ledger. buckets SBS: AL_DIA<=8, 1_30=9-30, 31_60=31-60, 61_90=61-90, 90_MAS=91+. EN_MORA = dias_mora>8. RAW 2%: misma proporcion de la tabla guia 7.6 escalada (la tabla suma 0.575%). deterioro: beneficiario en mora cobra ~65% menos en 90 dias previos.",
+  "notas": "comision es informativa (ingreso devengado, se liquida en lote); el ledger mueve el monto en 2 asientos. saldos: final = inicial + creditos - debitos del ledger. buckets derivados de dias_mora con cortes SBS 8/30/60/120: AL_DIA<=8, 1_30=9-30, 31_60=31-60 (unicos rotulos posibles: dias_mora esta topeado en 60, sin casos de 111/238 dias). EN_MORA = dias_mora>8. Cartera solo consumo (CRED_PERSONAL, producto 9). RAW 2%: misma proporcion de la tabla guia 7.6 escalada (la tabla suma 0.575%). deterioro: beneficiario en mora cobra ~65% menos en 90 dias previos.",
   "datasets": {
     "clean": {
       "run_id": "9616f743-040c-4515-8bdf-701612aa21ba",
@@ -22,18 +22,18 @@
         "tarjetas": 8000,
         "solicitudes": 3000,
         "creditos": 2000,
-        "cuotas": 40704,
-        "pagos": 20357,
+        "cuotas": 41424,
+        "pagos": 20190,
         "transacciones": 200000,
-        "completadas": 198273,
-        "rechazadas": 1727,
-        "movimientos": 396546,
+        "completadas": 198247,
+        "rechazadas": 1753,
+        "movimientos": 396494,
         "gestiones": 5000,
-        "mora_pct": 11.35
+        "mora_pct": 10.0
       },
       "ledger_control": {
-        "sum_debitos": 126585167.16,
-        "sum_creditos": 126585167.16,
+        "sum_debitos": 128747294.14,
+        "sum_creditos": 128747294.14,
         "balanced": true,
         "saldo_inicial_total": 5114035948.19,
         "saldo_final_total": 5114035948.19

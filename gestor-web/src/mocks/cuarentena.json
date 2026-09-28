@@ -1,561 +1,561 @@
 [
  {
-  "credito_id": 1000,
-  "cliente": "H",
-  "saldo_expuesto": 0.0,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1077,
-  "cliente": "C",
-  "saldo_expuesto": 0.0,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1103,
-  "cliente": "H",
-  "saldo_expuesto": 25002.44,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1112,
-  "cliente": "A",
-  "saldo_expuesto": 13273.2,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1121,
-  "cliente": "R",
-  "saldo_expuesto": 7107.76,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1264,
-  "cliente": "E",
-  "saldo_expuesto": 0.0,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1266,
-  "cliente": "L",
-  "saldo_expuesto": 6279.75,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1273,
-  "cliente": "P",
-  "saldo_expuesto": 116926.25,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1336,
-  "cliente": "G",
-  "saldo_expuesto": 14352.63,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1416,
-  "cliente": "L",
-  "saldo_expuesto": 22343.88,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1418,
-  "cliente": "H",
-  "saldo_expuesto": 25133.96,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1428,
-  "cliente": "E",
-  "saldo_expuesto": 0.0,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1439,
+  "credito_id": 1045,
   "cliente": "F",
-  "saldo_expuesto": 8721.88,
+  "saldo_expuesto": 24059.84,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 1499,
-  "cliente": "M",
-  "saldo_expuesto": 33524.67,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 151,
+  "credito_id": 1082,
   "cliente": "D",
-  "saldo_expuesto": 53782.65,
+  "saldo_expuesto": 8227.87,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 1522,
-  "cliente": "H",
-  "saldo_expuesto": 279632.59,
+  "credito_id": 109,
+  "cliente": "D",
+  "saldo_expuesto": 3139.95,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 1530,
-  "cliente": "G",
-  "saldo_expuesto": 2512.79,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1594,
-  "cliente": "G",
-  "saldo_expuesto": 3607.47,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1628,
+  "credito_id": 1142,
   "cliente": "R",
-  "saldo_expuesto": 46131.18,
+  "saldo_expuesto": 3348.91,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 1648,
+  "credito_id": 1167,
   "cliente": "D",
-  "saldo_expuesto": 9567.6,
+  "saldo_expuesto": 3340.49,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 1649,
+  "credito_id": 1207,
+  "cliente": "L",
+  "saldo_expuesto": 7090.09,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1238,
   "cliente": "A",
-  "saldo_expuesto": 15034.91,
+  "saldo_expuesto": 19810.58,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 1650,
-  "cliente": "L",
-  "saldo_expuesto": 100635.08,
+  "credito_id": 1240,
+  "cliente": "D",
+  "saldo_expuesto": 6799.12,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 1653,
+  "credito_id": 1242,
+  "cliente": "R",
+  "saldo_expuesto": 9901.39,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1263,
+  "cliente": "D",
+  "saldo_expuesto": 410.69,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1269,
+  "cliente": "D",
+  "saldo_expuesto": 17879.03,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1274,
+  "cliente": "A",
+  "saldo_expuesto": 2241.84,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1279,
   "cliente": "J",
-  "saldo_expuesto": 24404.32,
+  "saldo_expuesto": 5310.33,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 1717,
+  "credito_id": 1309,
   "cliente": "J",
-  "saldo_expuesto": 8683.73,
+  "saldo_expuesto": 1598.56,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 1728,
-  "cliente": "M",
-  "saldo_expuesto": 23692.61,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1730,
-  "cliente": "C",
-  "saldo_expuesto": 8158.48,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1752,
+  "credito_id": 1318,
   "cliente": "J",
-  "saldo_expuesto": 184389.86,
+  "saldo_expuesto": 11208.88,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 1787,
-  "cliente": "E",
-  "saldo_expuesto": 1851.17,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1799,
-  "cliente": "L",
-  "saldo_expuesto": 5208.22,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1804,
-  "cliente": "D",
-  "saldo_expuesto": 262474.49,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 183,
-  "cliente": "M",
-  "saldo_expuesto": 18295.84,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1860,
-  "cliente": "P",
-  "saldo_expuesto": 6777.73,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1862,
-  "cliente": "H",
-  "saldo_expuesto": 28491.92,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1871,
-  "cliente": "M",
-  "saldo_expuesto": 0.0,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1878,
-  "cliente": "E",
-  "saldo_expuesto": 0.0,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1886,
-  "cliente": "P",
-  "saldo_expuesto": 103893.12,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1913,
-  "cliente": "M",
-  "saldo_expuesto": 3439.11,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 1935,
-  "cliente": "D",
-  "saldo_expuesto": 19691.95,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 199,
-  "cliente": "M",
-  "saldo_expuesto": 55941.67,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 2,
-  "cliente": "M",
-  "saldo_expuesto": 8870.96,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 214,
-  "cliente": "H",
-  "saldo_expuesto": 27978.64,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 288,
-  "cliente": "D",
-  "saldo_expuesto": 11324.63,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 299,
-  "cliente": "D",
-  "saldo_expuesto": 2689.11,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 309,
-  "cliente": "C",
-  "saldo_expuesto": 11355.38,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 321,
-  "cliente": "P",
-  "saldo_expuesto": 9836.77,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 346,
+  "credito_id": 1359,
   "cliente": "S",
-  "saldo_expuesto": 4476.6,
+  "saldo_expuesto": 0.0,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 352,
+  "credito_id": 1375,
+  "cliente": "G",
+  "saldo_expuesto": 0.0,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 14,
+  "cliente": "S",
+  "saldo_expuesto": 7616.26,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1431,
   "cliente": "H",
-  "saldo_expuesto": 84200.17,
+  "saldo_expuesto": 8011.45,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1433,
+  "cliente": "H",
+  "saldo_expuesto": 13970.09,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1453,
+  "cliente": "D",
+  "saldo_expuesto": 3167.48,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1461,
+  "cliente": "P",
+  "saldo_expuesto": 0.0,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1464,
+  "cliente": "J",
+  "saldo_expuesto": 8871.25,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1465,
+  "cliente": "J",
+  "saldo_expuesto": 0.0,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 147,
+  "cliente": "H",
+  "saldo_expuesto": 16016.02,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 152,
+  "cliente": "M",
+  "saldo_expuesto": 5523.73,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1581,
+  "cliente": "J",
+  "saldo_expuesto": 6428.78,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 16,
+  "cliente": "G",
+  "saldo_expuesto": 6406.83,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1627,
+  "cliente": "F",
+  "saldo_expuesto": 19393.85,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1660,
+  "cliente": "D",
+  "saldo_expuesto": 11982.78,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1672,
+  "cliente": "J",
+  "saldo_expuesto": 4125.4,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1689,
+  "cliente": "S",
+  "saldo_expuesto": 7524.16,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1693,
+  "cliente": "S",
+  "saldo_expuesto": 5807.36,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1713,
+  "cliente": "D",
+  "saldo_expuesto": 13379.59,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1723,
+  "cliente": "A",
+  "saldo_expuesto": 2123.72,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1795,
+  "cliente": "M",
+  "saldo_expuesto": 26260.18,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1816,
+  "cliente": "L",
+  "saldo_expuesto": 13410.71,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1824,
+  "cliente": "P",
+  "saldo_expuesto": 7470.05,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1848,
+  "cliente": "C",
+  "saldo_expuesto": 6593.12,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1868,
+  "cliente": "C",
+  "saldo_expuesto": 7705.25,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 1873,
+  "cliente": "P",
+  "saldo_expuesto": 25413.96,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 189,
+  "cliente": "E",
+  "saldo_expuesto": 2144.83,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 200,
+  "cliente": "P",
+  "saldo_expuesto": 26513.79,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 24,
+  "cliente": "G",
+  "saldo_expuesto": 9839.48,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 244,
+  "cliente": "S",
+  "saldo_expuesto": 2265.71,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 262,
+  "cliente": "H",
+  "saldo_expuesto": 2673.47,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 265,
+  "cliente": "R",
+  "saldo_expuesto": 2806.2,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 313,
+  "cliente": "G",
+  "saldo_expuesto": 2120.09,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 340,
+  "cliente": "P",
+  "saldo_expuesto": 6927.09,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 357,
+  "cliente": "D",
+  "saldo_expuesto": 22784.72,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
   "credito_id": 363,
-  "cliente": "E",
-  "saldo_expuesto": 185380.29,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 369,
   "cliente": "P",
-  "saldo_expuesto": 10814.45,
+  "saldo_expuesto": 14687.32,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 410,
+  "credito_id": 368,
   "cliente": "H",
-  "saldo_expuesto": 101100.48,
+  "saldo_expuesto": 9400.34,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 45,
-  "cliente": "G",
-  "saldo_expuesto": 2496.14,
+  "credito_id": 378,
+  "cliente": "C",
+  "saldo_expuesto": 16894.67,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 481,
-  "cliente": "H",
-  "saldo_expuesto": 35123.27,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 484,
+  "credito_id": 380,
   "cliente": "S",
-  "saldo_expuesto": 11214.74,
+  "saldo_expuesto": 2405.7,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 5,
-  "cliente": "F",
-  "saldo_expuesto": 12079.59,
+  "credito_id": 383,
+  "cliente": "D",
+  "saldo_expuesto": 3870.43,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 520,
-  "cliente": "L",
-  "saldo_expuesto": 0.0,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 534,
-  "cliente": "R",
-  "saldo_expuesto": 184098.82,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 584,
-  "cliente": "L",
-  "saldo_expuesto": 0.0,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 590,
-  "cliente": "A",
-  "saldo_expuesto": 129524.8,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 60,
-  "cliente": "G",
-  "saldo_expuesto": 81029.67,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 612,
-  "cliente": "R",
-  "saldo_expuesto": 0.0,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 625,
+  "credito_id": 392,
   "cliente": "J",
-  "saldo_expuesto": 34016.52,
+  "saldo_expuesto": 7642.62,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 646,
-  "cliente": "S",
-  "saldo_expuesto": 83683.04,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 65,
+  "credito_id": 423,
   "cliente": "M",
-  "saldo_expuesto": 1465.77,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 660,
-  "cliente": "J",
   "saldo_expuesto": 0.0,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 663,
-  "cliente": "R",
-  "saldo_expuesto": 56703.17,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 685,
-  "cliente": "S",
-  "saldo_expuesto": 43405.86,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 781,
-  "cliente": "L",
-  "saldo_expuesto": 67044.39,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 785,
-  "cliente": "D",
-  "saldo_expuesto": 20470.68,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 799,
-  "cliente": "R",
-  "saldo_expuesto": 7297.63,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 803,
-  "cliente": "R",
-  "saldo_expuesto": 24586.53,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 814,
-  "cliente": "D",
-  "saldo_expuesto": 18502.98,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 816,
-  "cliente": "F",
-  "saldo_expuesto": 19126.91,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 864,
+  "credito_id": 425,
   "cliente": "C",
   "saldo_expuesto": 0.0,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 872,
+  "credito_id": 444,
+  "cliente": "P",
+  "saldo_expuesto": 2330.93,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 450,
+  "cliente": "S",
+  "saldo_expuesto": 9462.65,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 508,
+  "cliente": "J",
+  "saldo_expuesto": 2450.45,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 569,
+  "cliente": "S",
+  "saldo_expuesto": 20238.15,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 589,
+  "cliente": "J",
+  "saldo_expuesto": 8046.56,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 596,
+  "cliente": "H",
+  "saldo_expuesto": 1764.33,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 619,
+  "cliente": "J",
+  "saldo_expuesto": 2773.54,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 642,
+  "cliente": "R",
+  "saldo_expuesto": 3351.38,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 696,
+  "cliente": "D",
+  "saldo_expuesto": 3369.56,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 697,
+  "cliente": "R",
+  "saldo_expuesto": 27573.8,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 730,
+  "cliente": "M",
+  "saldo_expuesto": 9993.36,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 779,
+  "cliente": "E",
+  "saldo_expuesto": 5485.56,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 786,
+  "cliente": "S",
+  "saldo_expuesto": 8491.89,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 822,
+  "cliente": "H",
+  "saldo_expuesto": 0.0,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 889,
+  "cliente": "M",
+  "saldo_expuesto": 15975.83,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 893,
+  "cliente": "E",
+  "saldo_expuesto": 18642.38,
+  "tipo_error": "saldo_mayor_aprobado",
+  "regla": "coherencia_saldos"
+ },
+ {
+  "credito_id": 904,
   "cliente": "L",
-  "saldo_expuesto": 321162.85,
+  "saldo_expuesto": 21389.57,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 930,
-  "cliente": "R",
-  "saldo_expuesto": 275434.58,
+  "credito_id": 925,
+  "cliente": "L",
+  "saldo_expuesto": 0.0,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 946,
-  "cliente": "E",
-  "saldo_expuesto": 6642.89,
-  "tipo_error": "saldo_mayor_aprobado",
-  "regla": "coherencia_saldos"
- },
- {
-  "credito_id": 948,
+  "credito_id": 935,
   "cliente": "J",
-  "saldo_expuesto": 2560.49,
+  "saldo_expuesto": 0.0,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 966,
-  "cliente": "E",
-  "saldo_expuesto": 34091.62,
+  "credito_id": 958,
+  "cliente": "C",
+  "saldo_expuesto": 9448.87,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 968,
-  "cliente": "J",
-  "saldo_expuesto": 5865.33,
+  "credito_id": 967,
+  "cliente": "L",
+  "saldo_expuesto": 0.0,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  },
  {
-  "credito_id": 98,
-  "cliente": "R",
-  "saldo_expuesto": 63048.17,
+  "credito_id": 993,
+  "cliente": "L",
+  "saldo_expuesto": 0.0,
   "tipo_error": "saldo_mayor_aprobado",
   "regla": "coherencia_saldos"
  }

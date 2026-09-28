@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b2390d61ebdc6c99df9edc3ec2c19fe0851b9cac094beaea7e49c02d18ee918
-size 571
+-- =============================================================================
+-- V002__catalogos_seed.down.sql — Reversa de V002 (solo en base vacía/de prueba)
+-- Elimina únicamente las filas semilla. No usar si ya hay data operativa.
+-- =============================================================================
+
+DELETE FROM reference.productos WHERE producto_id BETWEEN 1 AND 11;
+DELETE FROM reference.sucursales WHERE sucursal_id BETWEEN 1 AND 10;
+DELETE FROM reference.canales WHERE canal_id BETWEEN 1 AND 7;
+-- monedas no se borran: vienen del master v12.

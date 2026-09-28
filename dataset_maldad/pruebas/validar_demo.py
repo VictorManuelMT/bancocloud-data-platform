@@ -104,6 +104,34 @@ check(all(float(r["saldo_capital_pendiente"]) <= float(r["monto_aprobado"]) for 
 check(all(r["bucket_riesgo"] in ("AL_DIA", "1_30_DIAS", "31_60_DIAS", "61_90_DIAS", "90_MAS_DIAS") for r in cre),
       "buckets")
 
+
+def bucket_esperado(d):
+    # Cortes SBS Res. 11356-2008 aplicados sobre dias_mora.
+    if d <= 8:
+        return "AL_DIA"
+    if d <= 30:
+        return "1_30_DIAS"
+    if d <= 60:
+        return "31_60_DIAS"
+    if d <= 120:
+        return "61_90_DIAS"
+    return "90_MAS_DIAS"
+
+
+# 7.8.2: sin casos por encima de 60 dias (antes habia de 111 y 238)
+dmax_mora = max(int(r["dias_mora"]) for r in cre)
+check(dmax_mora <= 60, "dias_mora tope 60 (%d)" % dmax_mora)
+# 7.8.4: el rotulo del bucket tiene que ser la categoria SBS del dias_mora,
+# no un mapeo propio. Con el tope de 60 solo se ven los tres primeros.
+mal_bucket = [r for r in cre if r["bucket_riesgo"] != bucket_esperado(int(r["dias_mora"]))]
+check(not mal_bucket, "bucket = corte SBS (%d malos, p.ej. %s)" % (
+    len(mal_bucket), (mal_bucket[0]["credito_id"] + "/" + mal_bucket[0]["dias_mora"]) if mal_bucket else "-"))
+check(all(r["bucket_riesgo"] in ("AL_DIA", "1_30_DIAS", "31_60_DIAS") for r in cre),
+      "solo buckets alcanzables")
+# 7.8.3: cartera solo consumo (CRED_PERSONAL = producto 9)
+check(all(r["producto_id"] == "9" for r in cre), "creditos solo producto 9")
+check(all(r["producto_id"] == "9" for r in sol), "solicitudes solo producto 9")
+
 # Cuotas: 12-36 por crédito, total = cap+int+seg
 ncuo = Counter()
 mal_cuota = 0

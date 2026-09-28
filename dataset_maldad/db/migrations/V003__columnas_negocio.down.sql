@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5ff05a8ec21d07b50c52d1572af7ad476c4771e9cbfc2294f4d6eb3821d7ef72
-size 617
+-- =============================================================================
+-- V003__columnas_negocio.down.sql — Reversa de V003
+-- =============================================================================
+
+ALTER TABLE core.tarjetas DROP COLUMN IF EXISTS saldo_disponible;
+ALTER TABLE core.cuentas DROP COLUMN IF EXISTS saldo_inicial;
+ALTER TABLE core.clientes DROP COLUMN IF EXISTS segmento_cliente;
+ALTER TABLE core.transacciones DROP CONSTRAINT IF EXISTS fk_transacciones_tipo_transaccion;
+ALTER TABLE core.transacciones DROP COLUMN IF EXISTS comision;
+DROP TABLE IF EXISTS reference.tipos_transaccion;
